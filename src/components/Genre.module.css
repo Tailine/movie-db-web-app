@@ -1,0 +1,14 @@
+.genreList {
+  list-style: none;
+  padding: 1em;
+}
+
+.genreList li {
+  display: inline-block;
+  margin: .5em .2em;
+  padding: .2em .5em;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid #116193;
+  color: #116193;
+}

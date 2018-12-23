@@ -1,0 +1,71 @@
+@media (min-width : 768px) {
+  .detailsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px auto;
+  }
+}
+
+.movieTitle {
+  background: #116193;
+  color: #00E8E4;
+  font-family: 'Abel', 'Courier New', Courier, monospace;
+  padding: .6em 0 .2em 4em;
+  margin-top: -5px;
+}
+
+@media (min-width: 768px) {
+  .movieTitle {
+    margin-top: 0;
+  }
+}
+
+.date {
+  color: gray;
+  margin: -1em 0 1em;
+  padding: 0 1em;
+  font-family: 'Lato', 'Courier New', Courier, monospace;
+}
+
+.ratingContainer {
+  background: #116193;
+  display: inline-block;
+  border-radius: 50%;
+  padding: .2em;
+  position: relative;
+  top: -2em;
+  left: .7em;
+}
+
+.rating {
+  background-color: #116193;
+  border: 3px solid #00E8E4;
+  display: inline-block;
+  border-radius: 50%;
+  padding: 1em;
+  color: #00E8E4;
+}
+
+.sinopse {
+  padding: 1em;
+  font-family: 'Lato', 'Courier New', Courier, monospace;
+  color: #656565;
+}
+
+.containerImageCard {
+  height: '100%';
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+  width: '100%';
+}
+
+.imageCard {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .imageCard {
+    height: 100%;
+    margin-bottom: -5px;
+  }
+}

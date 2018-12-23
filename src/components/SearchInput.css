@@ -1,0 +1,14 @@
+#search {
+  width: 80%;
+  display: block;
+  margin: 3em auto;
+  background-color: #EBEBEB;
+  padding: 1em;
+  border: none;
+  border-radius: 30px;
+}
+
+#search::placeholder {
+  color: rgb(87, 140, 184);
+  font-family: 'Abel','Courier New, Courier, monospace';
+}
