@@ -11,7 +11,7 @@ li {
   cursor: pointer;
   color: #116193;
   display: inline-block;
-  padding: .5em 1em;
+  padding: .3em .6em;
   font-family: 'Lato', 'Courier New', Courier, monospace;
 }
 
@@ -21,6 +21,7 @@ li {
   border-radius: 50%;  
   color: #00E8E4;
   font-family: 'Lato', 'Courier New', Courier, monospace;
+  font-size: 1.3em;
 }
 
 .pageNumberContainer {
