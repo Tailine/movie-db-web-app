@@ -1,6 +1,6 @@
 # About
-React app made using the moviedb API
+React app made using the moviedb API.
 
 # Instructions
-npm install
+npm install  
 npm start
