@@ -4,8 +4,14 @@ import SearchInput from '../components/SearchInput';
 import Card from '../components/Card';
 import axios from 'axios';
 import styles from './App.module.css';
+  
 
-class App extends Component {
+const liStyle = {
+  cursor: "pointer",
+}
+
+
+class App extends Component { 
 
   state = {
     movies: [],
@@ -22,7 +28,6 @@ class App extends Component {
     const apiKey = 'aeca12c4c31a9c2908e1b9dd78a645f5';
     let url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=pt-BR`;
     axios.get(url).then(response => {
-      console.log(response.data.total_pages)
       this.setState({ movies: response.data.results });
     })
   }  
@@ -42,19 +47,20 @@ class App extends Component {
       const currentMovies = movies.slice(indexOfFirstTodo, indexOfLastTodo);
       
       renderMovies = currentMovies.map((currentMovie) => {
-        return <Card movies={currentMovie}/>;
+        return <Card key={currentMovie.id} movie={currentMovie} />;
       });
 
-    const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(movies.length / moviesPerPage); i++) {
-      pageNumbers.push(i);
-    }
+      const pageNumbers = [];
+      for (let i = 1; i <= Math.ceil(movies.length / moviesPerPage); i++) {
+        pageNumbers.push(i);
+      }
 
       renderPageNumbers = pageNumbers.map(number => {
         return (
           <span className={number === currentPage ? styles.pageNumberContainer : ''}>
             <li
-              className={ number === currentPage ? styles.pagination : ''}
+              style={liStyle}
+              className={number === currentPage ? styles.pagination : ''}
               key={number}
               id={number}
               onClick={this.handleClick.bind(this)}
